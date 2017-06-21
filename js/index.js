@@ -11,6 +11,10 @@ $("#menu-main-menu li").click(function() {
 		//3联系方式
 		$("#contact").show().siblings(".p_main").hide();
 	}
+	 else if($(this).attr("data-id") == "progrect") {
+		//4我的项目
+		$("#progrect").show().siblings(".p_main").hide();
+	}
 });
 
 //文章缩放及返回     置顶
