@@ -1,4 +1,7 @@
-//导航
+
+
+
+//---------------------------导航
 $("#menu-main-menu li").click(function() {
 
 	if($(this).attr("data-id") == "technical") {
@@ -16,8 +19,11 @@ $("#menu-main-menu li").click(function() {
 		$("#progrect").show().siblings(".p_main").hide();
 	}
 });
+//---------------------------导航
 
-//文章缩放及返回     置顶
+
+
+//---------------------------文章缩放及返回     置顶
 $(".article").click(function() {
 	$(this).siblings(".article").hide();
 	$(this).removeClass("article").addClass("article_big");
@@ -31,8 +37,10 @@ $(".article").click(function() {
 		$(".article").show().children(".art_img").show();
 	});
 });
+//---------------------------文章缩放及返回     置顶
 
-//置顶置底
+
+//---------------------------置顶置底
 $(function() {
 	$("#updown").css("top", window.screen.availHeight / 2 - 100 + "px");
 	$(window).scroll(function() {
@@ -53,3 +61,6 @@ $(function() {
 		}, 800);
 	});
 });
+//---------------------------置顶置底
+
+

@@ -39,19 +39,40 @@
 					<div id="technical" class="p_main">
 						<div id="art_2" class="article">
 							<!--文章标题-->
-							<div class="art_head">HELLO WORLD!</div>
+							<div class="art_head">Leapmotion开发（一）-换手模</div>
 							<!--文章缩略图-->
 							<div class="art_img">
 								<img src="img/timm.jpg" alt="" />
 							</div>
 							<!--文章摘要-->
-							<div class="art_main">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eligendi sed deleniti omnis voluptatum labore numquam perspiciatis itaque iusto a porro consequuntur alias quibusdam deserunt ratione esse saepe? Accusamus necessitatibus.</div>
-							<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit excepturi quia tempora placeat voluptatibus iure illo nam ratione hic cum eius ipsam explicabo in. Deleniti possimus natus ab error cupiditate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci esse explicabo eos a! Cupiditate nobis odit nam corporis sint accusamus ea consequatur nostrum voluptas facere fuga laudantium tempora incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at minus quae inventore sequi quia autem dignissimos. Officia harum esse rerum id recusandae ad consequuntur cupiditate tenetur excepturi officiis commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos doloremque eveniet ea nobis ipsam maiores molestiae mollitia blanditiis accusamus ipsa dolorum tempore odio ad id temporibus nulla dicta veniam!</div>
-							<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit excepturi quia tempora placeat voluptatibus iure illo nam ratione hic cum eius ipsam explicabo in. Deleniti possimus natus ab error cupiditate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci esse explicabo eos a! Cupiditate nobis odit nam corporis sint accusamus ea consequatur nostrum voluptas facere fuga laudantium tempora incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at minus quae inventore sequi quia autem dignissimos. Officia harum esse rerum id recusandae ad consequuntur cupiditate tenetur excepturi officiis commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos doloremque eveniet ea nobis ipsam maiores molestiae mollitia blanditiis accusamus ipsa dolorum tempore odio ad id temporibus nulla dicta veniam!</div>
-							<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit excepturi quia tempora placeat voluptatibus iure illo nam ratione hic cum eius ipsam explicabo in. Deleniti possimus natus ab error cupiditate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci esse explicabo eos a! Cupiditate nobis odit nam corporis sint accusamus ea consequatur nostrum voluptas facere fuga laudantium tempora incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at minus quae inventore sequi quia autem dignissimos. Officia harum esse rerum id recusandae ad consequuntur cupiditate tenetur excepturi officiis commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos doloremque eveniet ea nobis ipsam maiores molestiae mollitia blanditiis accusamus ipsa dolorum tempore odio ad id temporibus nulla dicta veniam!</div>
-							<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit excepturi quia tempora placeat voluptatibus iure illo nam ratione hic cum eius ipsam explicabo in. Deleniti possimus natus ab error cupiditate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci esse explicabo eos a! Cupiditate nobis odit nam corporis sint accusamus ea consequatur nostrum voluptas facere fuga laudantium tempora incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at minus quae inventore sequi quia autem dignissimos. Officia harum esse rerum id recusandae ad consequuntur cupiditate tenetur excepturi officiis commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos doloremque eveniet ea nobis ipsam maiores molestiae mollitia blanditiis accusamus ipsa dolorum tempore odio ad id temporibus nulla dicta veniam!</div>
-							<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit excepturi quia tempora placeat voluptatibus iure illo nam ratione hic cum eius ipsam explicabo in. Deleniti possimus natus ab error cupiditate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci esse explicabo eos a! Cupiditate nobis odit nam corporis sint accusamus ea consequatur nostrum voluptas facere fuga laudantium tempora incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at minus quae inventore sequi quia autem dignissimos. Officia harum esse rerum id recusandae ad consequuntur cupiditate tenetur excepturi officiis commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos doloremque eveniet ea nobis ipsam maiores molestiae mollitia blanditiis accusamus ipsa dolorum tempore odio ad id temporibus nulla dicta veniam!</div>
-							
+							<div class="art_main">
+								<p>因为项目需求，最近在研究Leapmotion。</p>
+								<p>首先，需要再Leapmotion官网下载unity的SDK开发包，下载地址：
+									<a href="https://developer.leapmotion.com/unity#100">https://developer.leapmotion.com/unity#100</a>
+								</p>
+								<p>有6个unitypackage包，具体是干嘛的看名称就大概知道了。</p>
+								<p>下载完了新建一个Unity项目，把包导入进来，导进来之后，Project面板的结构应该是下图这样的</p>	
+								<p><img src="img/leapmotion_1.png" alt="" /></p>
+								<p>然后我们新建一个场景，先把LeapMotion的官方的Demo打开看一下，路径是LeapMotion-Scenes，里面有三个场景，一个AR的，一个VR的，一个桌面的，因为我是结合OculusCV1开发的，所以我就先去VR的场景里看了看
+体验完官方的Demo之后，发现他只有一双手，什么功能也没有，手模型还是骨骼，也不太美观。</p>
+								<p>接下来，我们先给它换一双手。</p>
+								<p>手的模型在LeapMotionModules文件夹下的Hands文件夹里，这里面有一些官方自带的手，不过我导进来的都没有贴图，也不知道是什么原因。。</p>
+								<p><img src="img/leapmotion_2.png" alt="" /></p>
+								<p>这里就是官方手的预制件位置，我就用这第一种吧</p>
+								<p><img src="img/leapmotion_3.png" alt="" /></p>
+								<p>就这个手。。还稍微真实了一点儿，怎么用呢？</p>
+								<p><img src="img/leapmotion_4.png"" alt="" /></p>
+								<p>先把这个预制件拖到你的场景中，然后把场景中原来的摄像机删掉</p>
+								<p><img src="img/leapmotion_5.png" alt="" /></p>
+								<p>然后把你选择的左右手预制件放到PhysicsModels下面，做为他的子级</p>
+								<p>然后找到LeapHandController，看他的属性面板</p>
+								<p><img src="img/leapmotion_6.png" alt="" /></p>
+								<p><img src="img/leapmotion_7.png" alt="" /></p>
+								<p>Model Pool下面写1，然后把左右手的实例拖到上图红框里，勾选Is Enabled，GroupName可以自己写。</p>
+								<p>然后点击运行，就可以在场景中看见你替换的这双手了~~</p>
+								<p><img src="img/leapmotion_8.png" alt="" /></p>
+								<p>你也可以替换成别的手，或者3D水平好的话，自己做一双手试试！</p>
+							</div> 	
 						
 						</div>
 						
@@ -138,6 +159,11 @@
 					
 					<!-----------------------------置顶 置底-->
 					<div id="updown"><span class="up"></span><span class="down"></span></div> 
+					
+					<!-----------------------------底部认证-->
+					<div id="footer" style="display:block;">
+						<a href="http://www.miitbeian.gov.cn/">©2017 Zhao Liang's blog  |  京ICP备16067793号</a>
+					</div>
 				</main>
 			</div>
 		</div>

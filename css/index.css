@@ -4,7 +4,7 @@
 }
 body {
 	font-family: myFont;
-	height:3000px;
+	height:2000px;
 }
 
 
@@ -39,10 +39,10 @@ body {
 /*-------------1.1文章头部*/
 
 .article .art_head {
-	font-weight: 700;
+	font-weight: 600;
 	color: #000000;
 	font-family: "arial narrow";
-	font-size: 4.3rem;
+	font-size: 3rem;
 }
 
 
@@ -56,6 +56,7 @@ body {
 .article .art_img img {
 	width: 100%;
 	height: 100%;
+	margin:2% 0;
 }
 
 
@@ -64,15 +65,24 @@ body {
 .article .art_main {
 	width: 100%;
 	margin: 2% 0;
+	position: relative;
+    overflow: hidden;
 }
-
+.article .art_main:after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding:0 5px 1px 45px;
+    content: '...';            
+    background:url(ellipsis_bg.png) repeat-y;
+}
 
 /*单独文章布局*/
 
 .article_big {
 	width: 100%;
-	height: 1000px;
-	border: 1px solid #007BB6;
+	/*height: 1000px;
+	border: 1px solid #007BB6;*/
 	display: block;
 }
 
@@ -80,11 +90,12 @@ body {
 /*-------------2.1文章头部*/
 
 .article_big .art_head {
-	font-weight: 800;
+	font-weight: 600;
 	color: red;
 	font-family: "arial narrow";
-	font-size: 4.3rem;
+	font-size: 3rem;
 	text-align: center;
+	margin:1% 0;
 }
 
 
@@ -293,4 +304,16 @@ h1.title a:hover {
 /*git*/
 #progrect .cont_m .cont_git{
 	margin-top:40%;
+}
+
+
+/*------------底部认证*/
+#footer{
+	width: 70%;
+	position:absolute;
+	bottom:50px;
+	text-align: center;
+}
+#footer a:hover{
+	color:#578732;
 }
